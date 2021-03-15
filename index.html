@@ -17,9 +17,11 @@
 		
 		<script>
 			
+			let bounce = null;
 			document.addEventListener("touchmove", $e => {
-				n1.textContent = document.documentElement.scrollTop + " " document.body.scrollTop;
-			}, {passive:false});
+				clearTimeout(bounce);
+				if ($e.target.scrollTop === 0) bounce = setTimeout(() => { $e.target.scrollTop = 1; }, 100);
+			});
 			
 		</script>
 
