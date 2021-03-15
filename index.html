@@ -18,8 +18,8 @@
 		<script>
 			
 			document.addEventListener("touchmove", $e => {
-				n1.textContent = main.scrollTop;
-				if ($e.target.scrollTop < 10) $e.preventDefault();
+				n1.textContent = $e.target + " " + $e.target.scrollTop;
+				if ($e.target.scrollTop < 0) $e.preventDefault();
 			}, {passive:false});
 			
 		</script>
