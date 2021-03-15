@@ -19,22 +19,18 @@
 			
 			setInterval(() => {
 				document.querySelectorAll("*").forEach($v => {
-					if ( $v.scrollHeight === $v.clientHeight ) $v.style.touchAction = "none";
+					$v.style.touchAction = ($v.scrollHeight === $v.clientHeight) ? "none" : "auto";
+					if ($v.scrollTop === 0) { $v.scrollTop = 1; };
 				});
 			}, 100);
-			
-			document.addEventListener("touchmove", $e => {
-				clearInterval($e.target.nobounce);
-				$e.target.nobounce = setInterval(() => { if ($e.target.scrollTop === 0) { $e.target.scrollTop = 5; }; }, 100);
-			});
 			
 		</script>
 
 	</head>
 
-	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:auto 1fr auto;">
+	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:100px 1fr 100px;">
 
-		<header>HHH 12</header>
+		<header>HHH 13</header>
 		
 		<main id="main" style="overflow:auto;">
 			
