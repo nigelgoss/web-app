@@ -18,7 +18,7 @@
 		<script>
 			
 			document.addEventListener("touchmove", $e => {
-				n1.textContent = $e.target + " " + $e.target.scrollTop;
+				n1.textContent = $e.target.tagName + " " + $e.target.scrollTop;
 				if ($e.target.scrollTop < 0) $e.preventDefault();
 			}, {passive:false});
 			
