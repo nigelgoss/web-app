@@ -18,9 +18,9 @@
 		<script>
 			
 			setInterval(() => {
-				document.querySelectorAll("*").forEach($v => {
-					$v.style.touchAction = ($v.scrollHeight === $v.clientHeight) ? "none" : "auto";
+				document.querySelectorAll("main *").forEach($v => {
 					if ($v.scrollTop === 0) { $v.scrollTop = 1; };
+					$v.style.touchAction = ($v.scrollTop === 0) ? "none" : "auto";
 				});
 			}, 100);
 			
@@ -28,9 +28,11 @@
 
 	</head>
 
-	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:100px 1fr 100px;">
+	<body style="height:100%; margin:0; display:grid; grid-template-rows:100px 1fr 100px;">
 
-		<header>HHH 13</header>
+		<header>HHH 14
+			<button onpointerdown="alert('1');">XXX</button>
+		</header>
 		
 		<main id="main" style="overflow:auto;">
 			
