@@ -11,14 +11,14 @@
 
 		<style>
 
-			header, footer { background-color:blue; }
+			header, footer { background-color:lightblue; }
 
 		</style>
 		
 		<script>
 			
 			document.addEventListener("touchmove", $e => {
-				console.log($e);
+				if ($e.target.scrollTop < 10) $e.preventDefault();
 			});
 			
 		</script>
@@ -36,11 +36,6 @@
 		</main>
 		
 		<footer>FFF</footer>
-		
-		<script>
-			document.body.ontouchstart = null;
-			document.body.ontouchmove = null;
-		</script>
 
 	</body>
 
