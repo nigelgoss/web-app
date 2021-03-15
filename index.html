@@ -17,8 +17,9 @@
 		
 		<script>
 			
-			document.addEventListener("touchend", $e => {
-				document.querySelectorAll("*").forEach($v => { if ($v.scrollTop === 0) $v.scrollTop = 5; });
+			document.addEventListener("touchmove", $e => {
+				clearInterval($e.target.nobounce);
+				$e.target.nobounce = setInterval(() => { if ($e.target.scrollTop === 0) { $e.scrollTop = 5; }; }, 100);
 			});
 			
 		</script>
