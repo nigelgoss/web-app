@@ -18,7 +18,7 @@
 		<script>
 			
 			setInterval(() => {
-				document.querySelectorAll("main *").forEach($v => {
+				document.querySelectorAll("*").forEach($v => {
 					if ($v.scrollTop === 0) { $v.scrollTop = 1; };
 					$v.style.touchAction = ($v.scrollTop === 0) ? "none" : "auto";
 				});
@@ -30,7 +30,7 @@
 
 	<body style="height:100%; margin:0; display:grid; grid-template-rows:100px 1fr 100px;">
 
-		<header>HHH 14
+		<header>HHH 15
 			<button onpointerdown="alert('1');">XXX</button>
 		</header>
 		
