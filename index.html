@@ -17,9 +17,9 @@
 		
 		<script>
 			
-			setInterval(() => {
-				document.querySelectorAll("*").forEach($v => { $v.scrollTop = 10; });
-			}, 100);
+			document.addEventListener("touchend", $e => {
+				document.querySelectorAll("*").forEach($v => { if ($v.scrollTop === 0) $v.scrollTop = 1; });
+			});
 			
 		</script>
 
@@ -27,7 +27,7 @@
 
 	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:auto 1fr auto;">
 
-		<header>HHH 10</header>
+		<header>HHH 11</header>
 		
 		<main id="main" style="overflow:auto;">
 			
