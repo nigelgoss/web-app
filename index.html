@@ -19,7 +19,7 @@
 			
 			document.addEventListener("touchmove", $e => {
 				n1.textContent = $e.target.tagName + " " + $e.target.scrollTop;
-				if ($e.target.scrollTop < 0) $e.preventDefault();
+				if ($e.target.scrollTop < 0) $e.target.scrollTop = 0;
 			}, {passive:false});
 			
 		</script>
@@ -28,7 +28,7 @@
 
 	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:auto 1fr auto;">
 
-		<header>HHH 4</header>
+		<header>HHH 5</header>
 		
 		<main id="main" style="overflow:auto;">
 			
