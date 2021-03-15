@@ -18,8 +18,7 @@
 		<script>
 			
 			document.addEventListener("touchmove", $e => {
-				if ($e.target.scrollTop < 0) $e.target.style.touchAction = "none";
-				setTimeout(() => { $e.target.style.touchAction = "initial"; }, 100);
+				main.textContent = document.documentElement.scrollTop + " " document.body.scrollTop;
 			}, {passive:false});
 			
 		</script>
@@ -28,7 +27,7 @@
 
 	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:auto 1fr auto;">
 
-		<header>HHH 8</header>
+		<header>HHH 9</header>
 		
 		<main id="main" style="overflow:auto;">
 			
