@@ -17,11 +17,9 @@
 		
 		<script>
 			
-			let bounce = null;
-			document.addEventListener("touchmove", $e => {
-				clearTimeout(bounce);
-				if ($e.target.scrollTop === 0) bounce = setTimeout(() => { $e.target.scrollTop = 1; }, 100);
-			});
+			setInterval(() => {
+				document.querySelectorAll("*").forEach($v => $v.scrollTop = 10; });
+			}, 100);
 			
 		</script>
 
@@ -29,7 +27,7 @@
 
 	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:auto 1fr auto;">
 
-		<header>HHH 9</header>
+		<header>HHH 10</header>
 		
 		<main id="main" style="overflow:auto;">
 			
