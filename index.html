@@ -18,17 +18,17 @@
 		<script>
 			
 			document.addEventListener("touchmove", $e => {
-				if (document.body.scrollTop < 0) document.body.scrollTop = 0;
-				if ($e.target.scrollTop < 0) $e.target.scrollTop = 0;
+				if ($e.target.scrollTop < 0) $e.target.style.touchAction = "none";
+				setTimeout(() => { $e.target.style.touchAction = "initial"; }, 100);
 			}, {passive:false});
 			
 		</script>
 
 	</head>
 
-	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:auto 1fr auto; touch-action:none;">
+	<body style="height:100%; margin:0; overscroll-behavior:none; display:grid; grid-template-rows:auto 1fr auto;">
 
-		<header>HHH 7</header>
+		<header>HHH 8</header>
 		
 		<main id="main" style="overflow:auto;">
 			
