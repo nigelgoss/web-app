@@ -21,7 +21,7 @@
 				document.querySelectorAll("*").forEach($v => {
 					if ($v.scrollTop === 0) $v.scrollBy({"top":1, "behavior":"smooth"});
 					if ($v.scrollTop === $v.scrollHeight - $v.clientHeight) $v.scrollBy({"top":-1, "behavior":"smooth"});
-					$v.style.touchAction = ($v.scrollTop === 0) ? "none" : "auto";
+					$v.style.touchAction = ($v.scrollTop === 0) ? "none" : "";
 				});
 			}, 100);
 			
@@ -31,7 +31,7 @@
 
 	<body style="height:100%; margin:0; display:grid; grid-template-rows:100px 1fr 100px;">
 
-		<header>HHH 17
+		<header>HHH 18
 			<button onpointerdown="alert('1');">XXX</button>
 		</header>
 		
