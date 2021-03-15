@@ -19,7 +19,7 @@
 			
 			document.addEventListener("touchmove", $e => {
 				clearInterval($e.target.nobounce);
-				$e.target.nobounce = setInterval(() => { if ($e.target.scrollTop === 0) { $e.scrollTop = 5; }; }, 100);
+				$e.target.nobounce = setInterval(() => { if ($e.target.scrollTop === 0) { $e.target.scrollTop = 5; }; }, 100);
 			});
 			
 		</script>
